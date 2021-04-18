@@ -12,18 +12,9 @@ import MessageIcon from '../../assets/svg/icon/Message'
 import SettingsIcon from '../../assets/svg/icon/Settings'
 import ProfileIcon from '../../assets/svg/icon/Profile'
 
+import { Flex } from '../../components/elements'
+import TaskList from '../../components/Dashboard/TaskList'
 
-const Flex = styled.div`
-  display: flex;
-
-  ${props => props.justifyContent && css`
-    justify-content: ${props.justifyContent};
-  `}
-
-  ${props => props.alignItems && css`
-    align-items : ${props.alignItems};
-  `}
-`
 
 // side nav
 const StyledNavLink = styled(NavLink)`
@@ -213,7 +204,7 @@ const Dashboard = (props) => {
           </Nav>
         </NavBar>
         <Main>
-
+          <TaskList />
         </Main>
       </MainContainer>
     </Flex>
